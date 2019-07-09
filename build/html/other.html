@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>その他の機能 &#8212; sample-project  ドキュメント</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="コードを記述" href="code.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>その他の機能<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>テーブル<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A and B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>脚注<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これは 脚注 <a class="footnote-reference brackets" href="#id5" id="id4">1</a> です。</p>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p>本文の下の方につける注記</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h2>数式<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>数式を有効にするには、<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> に <code class="docutils literal notranslate"><span class="pre">sphinx.ext.mathjax</span></code> という拡張モジュールを追加する必要があります。以下のような感じです。モジュールを有効にすれば、LaTeX で数式を記述することができます。</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">conf.py</span><a class="headerlink" href="#id8" title="このコードへのパーマリンク">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom
+# ones.
+extensions = [&#39;sphinx.ext.mathjax&#39;
+]
+</pre></div>
+</div>
+</div>
+<p><cite>N</cite> 個の整数 <span class="math notranslate nohighlight">\(d[0], d[1], \dots, d[N-1]\)</span> が与えられます。これは数式のサンプルです。</p>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>TODOも拡張モジュール <code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> を有効にすると記述できるようになります。あとでやりたいことを残しておくときに便利ですね。</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">conf.py</span><a class="headerlink" href="#id9" title="このコードへのパーマリンク">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom
+# ones.
+extensions = [&#39;sphinx.ext.mathjax&#39;, &#39;sphinx.ext.todo&#39;
+]
+
+[extensions]
+todo_include_todos = True
+</pre></div>
+</div>
+</div>
+<div class="admonition-todo admonition" id="id7">
+<p class="admonition-title">課題</p>
+<p>これは TODO なので、後ほど調査する</p>
+</div>
+<p>TODOを表示する場所も選ぶことができます。今回は index ページに記載しておきましょう。表示させたい場所に <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">..</span> <span class="pre">todolist::</span> <span class="pre">`</span></code> と記述しておけばよいです。</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="cp">.. sample-project documentation master file, created by</span>
+sphinx-quickstart on Mon Jul  8 22:38:47 2019.
+You can adapt this file completely to your liking, but it should at least
+contain the root <span class="nv">`toctree`</span> directive.
+
+<span class="gh">Welcome to sample-project&#39;s documentation!</span>
+<span class="gh">==========================================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<span class="nc">:maxdepth:</span> <span class="nf">2</span>
+<span class="nc">:caption:</span> <span class="nf">Contents:</span>
+
+hello
+hierarchy
+code
+other
+
+<span class="gh">Indices and tables</span>
+<span class="gh">==================</span>
+
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`genindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`modindex`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`search`</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">sample-project</a></h1>
+
+
+
+
+
+
+
+
+<h3>ナビゲーション</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hello.html">はじめてのSphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">段落</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">コードを記述</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">その他の機能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">テーブル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">脚注</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">数式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="code.html" title="前の章へ">コードを記述</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, tsuji.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/other.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
